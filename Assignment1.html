@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Top Pizza Brazil</h1>    
+    </header>
+
+    <main>
+
+        <img src="pizza.png" alt="Delicious Pizza" width="200" height="100">
+
+        <form action="order_confirmation.php" method="post">
+            <fieldset>
+                <legend>Pizza Order</legend>
+                <label for="num_pizzas">Number of Pizzas:</label>
+                <input type="number" id="num_pizzas" name="num_pizzas" min="1" required><br>
+
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br>
+
+                <label for="shape_round">Round:</label>
+                <input type="radio" id="shape_round" name="shape" value="round" checked>
+
+                <label for="shape_square">Square:</label>
+                <input type="radio" id="shape_square" name="shape" value="square"><br>
+
+                <label for="toppings">Toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label><br>
+
+                <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label><br>
+
+                <input type="checkbox" id="olives" name="toppings[]" value="olives">
+                <label for="olives">Olives</label><br>
+
+                <input type="checkbox" id="sausage" name="toppings[]" value="sausage">
+                <label for="sausage">Sausage</label><br>
+
+                <input type="checkbox" id="onions" name="toppings[]" value="onions">
+                <label for="onions">Onions</label><br>
+                <!-- Add more toppings checkboxes here -->
+
+                <label for="crust">Crust Type:</label><br>
+                <input type="radio" id="deep_dish" name="crust" value="deep_dish">
+                <label for="deep_dish">Deep Dish</label><br>
+
+                <input type="radio" id="thin_crust" name="crust" value="thin_crust">
+                <label for="thin_crust">Thin Crust</label><br>
+
+                <input type="radio" id="stuffed_crust" name="crust" value="stuffed_crust">
+                <label for="stuffed_crust">Stuffed Crust</label><br>
+
+                <input type="radio" id="whole_wheat" name="crust" value="whole_wheat">
+                <label for="whole_wheat">Whole Wheat</label><br>
+                <!-- Add more crust type radio buttons here -->
+
+                <label for="delivery">Delivery Method:</label><br>
+                <select id="delivery" name="delivery">
+                    <option value="takeout">Takeout</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="eat_in">Eat In</option>
+                </select><br>
+
+                <!-- Add more form fields as needed -->
+
+            </fieldset>
+
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+
+</body>
+</html>
